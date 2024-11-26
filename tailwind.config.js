@@ -9,7 +9,7 @@ module.exports = {
         h3: "1.75rem",
       },
       colors: {
-        lightBlue: "#f0f8ff",
+        lightBlue: "#f4f9fc ",
         darkBlue: "#00518c",
       },
     },
