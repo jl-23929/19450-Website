@@ -6,6 +6,7 @@
     <title>Light Dark Bots</title>
     <link href="output.css" rel="stylesheet" />
   </head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
 
   <!-- Google tag (gtag.js) -->
   <script
@@ -21,7 +22,10 @@
 
     gtag("config", "G-YSY55616MK");
   </script>
-
+  <script
+    type="module"
+    src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"
+  ></script>
   <body class="bg-darkBlue">
     <div>
       <!--Nav-->
@@ -86,8 +90,11 @@
           </ul>
         </div>
       </nav>
+
       <div class="flex flex-wrap gap-4 justify-center items-start">
-        <div class="flex flex-wrap gap-4 py-24 grow max-w-screen-lg">
+        <div
+          class="flex flex-wrap gap-4 py-24 grow max-w-screen-lg justify-center items-center"
+        >
           <h1 class="text-6xl text-white font-bold text-center">About Us</h1>
           <div class="flex flex-wrap sm:flex-nowrap">
             <p class="text-white p-4 object-contain w-1/2">
@@ -103,9 +110,12 @@
               src="Images/BGS-Steam-108-1000x562-4229686735.jpg"
             />
           </div>
+          <div class="max-w-screen-md max-h-screen-md" id="container"></div>
         </div>
         <div class="grid-cols-1 py-24 grow max-w-screen-lg">
-          <h1 class="text-6xl text-white font-bold text-center">Timeline</h1>
+          <h1 class="text-6xl text-white font-bold text-center">
+            Season Timeline
+          </h1>
           <div class="container">
             <!-- Timeline: Contextual -->
             <div class="relative py-5 dark:text-gray-100">
@@ -541,5 +551,5 @@
       <img src="bgsLogo.png" alt="image description" />
     </div>
   </footer>
-  <script src="scripts.js"></script>
+  <script type="module" src="scripts.js"></script>
 </html>

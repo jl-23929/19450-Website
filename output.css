@@ -738,6 +738,10 @@ video {
   max-width: 24rem;
 }
 
+.max-w-screen-md {
+  max-width: 768px;
+}
+
 .flex-none {
   flex: none;
 }
