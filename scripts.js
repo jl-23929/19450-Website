@@ -41,7 +41,10 @@ const camera = new THREE.OrthographicCamera(
   0.1, // Near clipping plane
   1000 // Far clipping plane
 );
-
+const container = document.querySelector("#container");
+if (!container) {
+  console.error("Container not found!");
+}
 let object;
 
 let controls;
@@ -64,16 +67,18 @@ loader.load(
 
 const renderer = new THREE.WebGLRenderer({ alpha: true });
 
-camera.aspect = window.innerWidth / window.innerHeight;
-renderer.setSize(window.innerWidth / 2, window.innerHeight / 2);
+camera.aspect = 1;
+camera.updateProjectionMatrix();
+
+renderer.setSize(innerWidth / 2, innerHeight / 2);
 camera.updateProjectionMatrix();
 renderer.render(scene, camera);
 document.getElementById("container").appendChild(renderer.domElement);
 
-camera.position.set(0, -0.4, 0.4);
+camera.position.set(-0.4, -0.2, 0.4);
 
-// camera.lookAt(-1, -0.3, 0.2);
-camera.lookAt(0, 0, 0);
+camera.lookAt(-1, -0.3, 0.2);
+//camera.lookAt(-1, 0, 0);
 const topLight = new THREE.DirectionalLight(0xffffff, 1);
 topLight.position.set(-1, -1, 1);
 topLight.castShadow = false;
@@ -90,10 +95,11 @@ function animate() {
   renderer.render(scene, camera);
 }
 
-window.addEventListener("resize", function () {
-  camera.aspect = window.innerWidth / window.innerHeight;
-  camera.updateProjectionMatrix();
-  renderer.setSize(window.innerWidth / 8, window.innerHeight / 8);
+window.addEventListener("resize", function resizeRendererToSquare() {
+  const size = Math.min(container.clientWidth, container.clientHeight); // Use the smallest dimension
+  renderer.setSize(size, size); // Square dimensions
+  camera.aspect = 1; // Square aspect ratio
+  camera.updateProjectionMatrix(); // Update the camera
 });
 
 animate();
