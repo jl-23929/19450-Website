@@ -46,11 +46,6 @@ let object;
 
 let controls;
 
-let objectToRender = "robot";
-
-let mouseX = window.innerWidth / 2;
-let mouseY = window.innerHeight / 2;
-
 const loader = new GLTFLoader();
 
 loader.load(
@@ -69,13 +64,10 @@ loader.load(
 
 const renderer = new THREE.WebGLRenderer({ alpha: true });
 
-// renderer.setSize(window.innerWidth / 2, window.innerHeight / 2);
-
-renderer.setSize(
-  document.getElementById("container").clientWidth / 2,
-  document.getElementById("container").clientHeight / 2
-);
-
+camera.aspect = window.innerWidth / window.innerHeight;
+renderer.setSize(window.innerWidth / 2, window.innerHeight / 2);
+camera.updateProjectionMatrix();
+renderer.render(scene, camera);
 document.getElementById("container").appendChild(renderer.domElement);
 
 camera.position.set(0, -0.4, 0.4);
@@ -101,7 +93,7 @@ function animate() {
 window.addEventListener("resize", function () {
   camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();
-  renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.setSize(window.innerWidth / 8, window.innerHeight / 8);
 });
 
 animate();
