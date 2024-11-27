@@ -4,6 +4,7 @@
     "vite": "^6.0.1"
   },
   "dependencies": {
+    "aws-sdk": "^2.1692.0",
     "three": "^0.170.0"
   }
 }

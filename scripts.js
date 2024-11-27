@@ -54,7 +54,7 @@ let mouseY = window.innerHeight / 2;
 const loader = new GLTFLoader();
 
 loader.load(
-  "Images/Robot.glb",
+  "https://19450-website.s3.ap-southeast-2.amazonaws.com/Robot.glb",
   function (gltf) {
     object = gltf.scene;
     scene.add(object);
