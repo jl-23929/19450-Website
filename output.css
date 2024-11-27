@@ -742,6 +742,14 @@ video {
   max-width: 768px;
 }
 
+.max-w-96 {
+  max-width: 24rem;
+}
+
+.max-w-64 {
+  max-width: 16rem;
+}
+
 .flex-none {
   flex: none;
 }
