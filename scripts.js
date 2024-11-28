@@ -52,7 +52,9 @@ let controls;
 const loader = new GLTFLoader();
 
 loader.load(
-  "https://19450-website.s3.ap-southeast-2.amazonaws.com/Robot.glb",
+  //TODO:
+  //https://19450-website.s3.ap-southeast-2.amazonaws.com/Robot.glb
+  "Images/Robot Assembly.gltf",
   function (gltf) {
     object = gltf.scene;
     scene.add(object);
@@ -65,12 +67,12 @@ loader.load(
   }
 );
 
-const renderer = new THREE.WebGLRenderer({ alpha: true });
+const renderer = new THREE.WebGLRenderer({ alpha: false });
 
-camera.aspect = 1;
+camera.aspect = 10;
 camera.updateProjectionMatrix();
 
-renderer.setSize(innerWidth / 2, innerHeight / 2);
+renderer.setSize(innerHeight / 3, innerHeight / 3);
 camera.updateProjectionMatrix();
 renderer.render(scene, camera);
 document.getElementById("container").appendChild(renderer.domElement);
@@ -98,7 +100,7 @@ function animate() {
 window.addEventListener("resize", function resizeRendererToSquare() {
   const size = Math.min(container.clientWidth, container.clientHeight); // Use the smallest dimension
   renderer.setSize(size, size); // Square dimensions
-  camera.aspect = 1; // Square aspect ratio
+  camera.aspect = 10; // Square aspect ratio
   camera.updateProjectionMatrix(); // Update the camera
 });
 
