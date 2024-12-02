@@ -1,3 +1,4 @@
+import "taos";
 document.addEventListener("DOMContentLoaded", () => {
   const menuButton = document.getElementById("menu-button");
   const menu = document.getElementById("menu");
@@ -103,3 +104,22 @@ window.addEventListener("resize", function resizeRendererToSquare() {
 });
 
 animate();
+
+document.addEventListener("DOMContentLoaded", () => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("animate"); // Add class to trigger animation
+          observer.unobserve(entry.target); // Stop observing after animation starts
+        }
+      });
+    },
+    {
+      threshold: 0.1, // Trigger when 10% of the element is visible
+    }
+  );
+
+  const h3Elements = document.querySelectorAll("h3"); // Select all h3 elements
+  h3Elements.forEach((h3) => observer.observe(h3));
+});

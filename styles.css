@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+h3 {
+  opacity: 0;
+  animation: CSSScrollReveal 1s ease-in-out forwards 0.5s;
+}
+@keyframes CSSScrollReveal {
+  from {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
