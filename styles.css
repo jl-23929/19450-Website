@@ -16,3 +16,7 @@ h3 {
     transform: translateY(0);
   }
 }
+@font-face {
+  font-family: "Gotham";
+  src: url("../Gotham/GothamBold.ttf");
+}

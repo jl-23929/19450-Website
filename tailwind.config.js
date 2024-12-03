@@ -18,6 +18,9 @@ module.exports = {
         mediumBlue: "#2646bc",
         lightestBlue: "#deedf9",
       },
+      fontFamily: {
+        sans: ["Gotham", "sans-serif"],
+      },
     },
   },
 };
