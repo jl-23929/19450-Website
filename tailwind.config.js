@@ -19,8 +19,9 @@ module.exports = {
         lightestBlue: "#deedf9",
       },
       fontFamily: {
-        sans: ["Gotham", "sans-serif"],
+        sans: ["Barlow", "sans-serif"],
       },
     },
   },
+  plugins: [require("tailwindcss-textshadow")],
 };

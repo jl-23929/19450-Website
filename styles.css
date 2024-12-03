@@ -17,6 +17,6 @@ h3 {
   }
 }
 @font-face {
-  font-family: "Gotham";
-  src: url("../Gotham/GothamBold.ttf");
+  font-family: "Barlow";
+  src: url("../Barlow/Barlow-SemiBold.ttf");
 }

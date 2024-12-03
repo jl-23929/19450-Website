@@ -154,7 +154,7 @@ html,
   -o-tab-size: 4;
      tab-size: 4;
   /* 3 */
-  font-family: Gotham, sans-serif;
+  font-family: Barlow, sans-serif;
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
@@ -1000,10 +1000,6 @@ video {
   text-align: center;
 }
 
-.align-bottom {
-  vertical-align: bottom;
-}
-
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -1070,6 +1066,11 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
+.text-lightBlue {
+  --tw-text-opacity: 1;
+  color: rgb(0 149 250 / var(--tw-text-opacity, 1));
+}
+
 .opacity-80 {
   opacity: 0.8;
 }
@@ -1119,6 +1120,14 @@ video {
 .drop-shadow-md {
   --tw-drop-shadow: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.text-shadow {
+  text-shadow: 0px 0px 1px rgb(0 0 0 / 20%), 0px 0px 1px rgb(1 0 5 / 10%);
+}
+
+.text-shadow-xl {
+  text-shadow: 1px 1px 3px rgb(0 0 0 / 29%), 2px 4px 7px rgb(73 64 125 / 35%);
 }
 
 .hover\:bg-darkBlue:hover {
