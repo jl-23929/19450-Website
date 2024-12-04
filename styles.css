@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-h3 {
+animation {
   opacity: 0;
   animation: CSSScrollReveal 1s ease-in-out forwards 0.5s;
 }
