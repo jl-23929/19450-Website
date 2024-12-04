@@ -123,14 +123,14 @@
           <input
             class="rounded drop-shadow-2xl p-4"
             type="text"
-            name="firstName"
+            name="First Name"
             placeholder="John"
             required
           />
           <input
             class="rounded drop-shadow-2xl p-4"
             type="text"
-            name="lastName"
+            name="Last Name"
             placeholder="Doe"
             required
           />
@@ -140,16 +140,29 @@
           <input
             class="rounded drop-shadow-2xl p-4 w-full"
             type="email"
-            name="email"
+            name="Email"
             placeholder="john@lightdarkbots.com"
             required
           />
         </div>
         <div class="space-y-1 p-4">
+          <h2 class="text-4xl text-white pb-2">Reason for Contact</h2>
+          <select
+            class="rounded drop-shadow-2xl p-4 w-full"
+            name="Dropdown"
+            required
+          >
+            <option value="" disabled selected>Please select an option</option>
+            <option value="Sponsor">Sponsor Us</option>
+            <option value="Outreach">Outreach</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="space-y-1 p-4">
           <h2 class="text-4xl text-white pb-2">Message</h2>
           <textarea
             class="rounded drop-shadow-2xl p-4 w-full"
-            name="message"
+            name="Message"
             required
             placeholder="Please provide details about your enquiry here"
           ></textarea>
